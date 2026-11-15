@@ -1,1 +1,228 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070a12">
+<title>MAJIDI | Digital Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg:#070a12;
+  --cyan:#53e4e8;
+  --purple:#9876ff;
+  --pink:#ed79cf;
+  --text:#f4f7ff;
+  --muted:#9aa9c1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:
+ radial-gradient(ellipse at 75% 15%,#283c733b,transparent 38%),
+ var(--bg);
+ color:var(--text);
+ font-family:Vazirmatn,Tahoma,sans-serif;
+}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,90%);margin:auto}
+nav{
+ height:82px;display:flex;align-items:center;
+ justify-content:space-between;border-bottom:1px solid #ffffff16
+}
+.logo{font:800 19px Arial;letter-spacing:2px;direction:ltr}
+.logo span{color:var(--cyan)}
+.links{display:flex;gap:28px;color:var(--muted);font-size:13px}
+.links a:hover{color:var(--cyan)}
+.contact-link{border:1px solid #53e4e866;padding:9px 18px;border-radius:30px;color:var(--cyan);font-size:12px}
+.hero{
+ min-height:660px;display:grid;
+ grid-template-columns:1.1fr .9fr;
+ align-items:center;gap:20px;
+}
+.eyebrow{color:var(--cyan);font-size:13px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.35;margin:22px 0}
+.gradient{
+ background:linear-gradient(100deg,var(--cyan),#a5a2ff,var(--pink));
+ color:transparent;background-clip:text
+}
+.intro{color:var(--muted);line-height:2.3;max-width:540px;font-size:15px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 22px;border-radius:30px;font-size:13px;font-weight:600}
+.primary{background:linear-gradient(100deg,var(--cyan),#a5a2ff);color:#071016}
+.secondary{border:1px solid #ffffff30}
+.visual{height:430px;display:grid;place-items:center;perspective:900px;position:relative}
+.orbit{
+ width:min(330px,75vw);aspect-ratio:1;
+ position:relative;transform-style:preserve-3d;
+ animation:float 5s ease-in-out infinite;
+}
+.sphere{
+ position:absolute;inset:12%;border-radius:50%;
+ background:radial-gradient(circle at 30% 25%,#eaffff,#59e5e9 9%,#3178a8 35%,#27245e 70%,#090d20);
+ box-shadow:inset -25px -25px 45px #0009,0 0 75px #53e4e83b;
+}
+.ring{
+ position:absolute;inset:0;border:1px solid #53e4e899;
+ border-radius:50%;transform:rotateX(68deg) rotateZ(-25deg);
+ animation:spin 16s linear infinite;
+}
+.ring.two{inset:10%;border-color:#9876ff;transform:rotateY(65deg);animation-duration:22s}
+.ring.three{inset:-10%;border-style:dashed;border-color:#ed79cf66;animation-duration:30s}
+@keyframes spin{to{rotate:360deg}}
+@keyframes float{50%{transform:translateY(-15px) rotateY(8deg)}}
+.float-card{
+ position:absolute;background:#111c2bd9;
+ border:1px solid #ffffff20;border-radius:12px;
+ padding:12px 16px;font-size:11px;backdrop-filter:blur(12px)
+}
+.float-card b{display:block;color:var(--cyan);direction:ltr;margin-bottom:5px}
+.one{top:12%;right:0}
+.two{bottom:18%;left:0}
+.three{bottom:3%;right:18%}
+section{padding:75px 0}
+.kicker{color:var(--cyan);font:700 11px Arial;letter-spacing:2px;direction:ltr}
+h2{font-size:29px;margin:12px 0 30px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+ padding:25px;border:1px solid #ffffff19;border-radius:18px;
+ background:linear-gradient(145deg,#172238,#0c1220);
+ transition:.3s;min-height:220px
+}
+.card:hover{transform:translateY(-7px);border-color:#53e4e877}
+.number{color:#7486a3;font:12px Arial;direction:ltr}
+.symbol{font-size:30px;color:var(--cyan);margin:20px 0}
+.card h3{font-size:17px}
+.card p{color:var(--muted);font-size:12px;line-height:2.2}
+.about{
+ border:1px solid #53e4e833;border-radius:22px;
+ padding:35px;background:radial-gradient(ellipse at 80% 0,#53e4e81a,transparent 55%),#101827
+}
+.about p{color:var(--muted);line-height:2.4;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags span{border:1px solid #ffffff20;border-radius:25px;padding:7px 13px;font-size:11px}
+footer{
+ padding:25px 0;border-top:1px solid #ffffff16;
+ color:var(--muted);font-size:11px;direction:ltr;
+ display:flex;justify-content:space-between
+}
+@media(max-width:750px){
+ .links{display:none}
+ .hero{grid-template-columns:1fr;padding:40px 0}
+ .visual{grid-row:1;height:350px}
+ .hero-copy{text-align:center}
+ .intro{margin:auto}
+ .buttons{justify-content:center}
+ .cards{grid-template-columns:1fr}
+ .card{min-height:180px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+ <a class="logo" href="#">MAJIDI<span>.</span> DIGITAL</a>
+ <div class="links">
+  <a href="#work">فعالیت‌ها</a>
+  <a href="#about">درباره من</a>
+  <a href="#contact">ارتباط</a>
+ </div>
+ <a class="contact-link" href="https://instagram.com/majidi.adobe">ارتباط با من ↗</a>
+</nav>
+
+<main>
+<header class="hero">
+ <div class="hero-copy">
+  <div class="eyebrow">✦ فضای خلاقیت دیجیتال</div>
+  <h1>ایده‌ها را به<br><span class="gradient">تجربه تبدیل کن.</span></h1>
+  <p class="intro">
+   اینجا نقطه تلاقی طراحی سه‌بعدی وب، هوش مصنوعی و روایت بصری است؛
+   فضایی برای ساخت تجربه‌های دیجیتال متفاوت.
+  </p>
+  <div class="buttons">
+   <a class="btn primary" href="#work">مشاهده فعالیت‌ها</a>
+   <a class="btn secondary" href="#about">درباره من</a>
+  </div>
+ </div>
+
+ <div class="visual">
+  <div class="orbit">
+   <div class="ring"></div>
+   <div class="ring two"></div>
+   <div class="ring three"></div>
+   <div class="sphere"></div>
+  </div>
+  <div class="float-card one"><b>01 / DESIGN</b>تجربه‌های تعاملی</div>
+  <div class="float-card two"><b>02 / AI</b>خلق با هوش مصنوعی</div>
+  <div class="float-card three"><b>03 / VISUAL</b>روایت تصویری</div>
+ </div>
+</header>
+
+<section id="work">
+ <div class="kicker">WHAT I EXPLORE</div>
+ <h2>حوزه‌های فعالیت</h2>
+ <div class="cards">
+  <article class="card">
+   <div class="number">01 — 3D WEB</div>
+   <div class="symbol">◈</div>
+   <h3>طراحی وب سه‌بعدی</h3>
+   <p>ترکیب عمق، حرکت و تعامل برای خلق تجربه‌های متفاوت در وب.</p>
+  </article>
+  <article class="card">
+   <div class="number">02 — AI</div>
+   <div class="symbol">✳</div>
+   <h3>هوش مصنوعی و تولید محتوا</h3>
+   <p>استفاده از ابزارهای هوش مصنوعی برای تصویرسازی، ویدیو و ایده‌پردازی.</p>
+  </article>
+  <article class="card">
+   <div class="number">03 — VISUAL</div>
+   <div class="symbol">⌘</div>
+   <h3>طراحی و روایت بصری</h3>
+   <p>طراحی گرافیک، تدوین ویدیو و تبدیل ایده‌ها به محتوای دیداری.</p>
+  </article>
+ </div>
+</section>
+
+<section id="about">
+ <div class="about">
+  <div class="kicker">ABOUT THIS SPACE</div>
+  <h2>ساختن، یادگرفتن، به‌اشتراک‌گذاشتن</h2>
+  <p>
+   این پورتفولیو دفترچه‌ای زنده از مسیر تجربه و ساخت است؛
+   از طراحی و تولید محتوای دیجیتال تا کشف ابزارهای تازه هوش مصنوعی
+   و ساخت وب‌تجربه‌های سه‌بعدی.
+  </p>
+  <div class="tags">
+   <span>3D Web Design</span>
+   <span>AI Content</span>
+   <span>Visual Design</span>
+   <span>Video Editing</span>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="about" style="text-align:center">
+  <div class="kicker">LET'S CONNECT</div>
+  <h2>ایده‌ای برای ساختن داری؟</h2>
+  <p>برای دیدن آموزش‌ها و ارتباط بیشتر، به اینستاگرام سر بزن.</p>
+  <a class="btn primary" href="https://instagram.com/majidi.adobe">
+   Instagram · @majidi.adobe ↗
+  </a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <span>© 2026 MAJIDI DIGITAL</span>
+ <span>DESIGNED TO EXPLORE</span>
+</footer>
+</div>
+</body>
+</html>
+
